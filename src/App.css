@@ -1,0 +1,54 @@
+/* Other rules */
+
+Header {
+  border-bottom: 2px solid lightgrey;
+  width: 1440px;
+  height: 59px;
+}
+header > img {
+  height: 31px;
+  margin-left: 122px;
+}
+.entete {
+  border: 2px solid red;
+  /* display: flex; */
+}
+
+h1 {
+  margin-left: 122px;
+  font-size: 32px 26.7px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+}
+.entete > p {
+  margin-left: 122px;
+  font-size: 19px;
+  border: 2px solid blueviolet;
+  color: #868686;
+  width: 800px;
+  text-align: justify;
+  margin-top: 50px;
+  display: flex;
+}
+
+.entete > img {
+  height: 197px;
+  display: flex;
+}
+
+.menu {
+  border: black solid 2px;
+  height: 160px;
+  width: 400px;
+}
+.menu > img {
+  height: 31px;
+  margin-left: 122px;
+}
+.panier {
+  border: blue 2px solid;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px©;
+}
