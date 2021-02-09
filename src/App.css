@@ -52,3 +52,10 @@ h1 {
   justify-content: flex-end;
   margin-top: 50px©;
 }
+h2 {
+  display: flex;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
