@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import logo from "./Deliveroo_logo.svg.png";
 import Entete from "./Entete";
 import Categorys from "./Categorys";
+import Panier from "./Panier";
 
 function App() {
   const [data, setData] = useState({});
@@ -31,6 +32,7 @@ function App() {
       </header>
       <div>
         <Entete data={data.restaurant} />
+        <Panier data={data.button} />
         <Categorys data={data.categories} />
       </div>
     </>
