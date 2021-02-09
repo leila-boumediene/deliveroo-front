@@ -1,31 +1,27 @@
 import { useState } from "react";
+import Panier from "./Panier";
 
 const Menu = ({ data }) => {
-  const [counter, setCounter] = useState(0);
+  // création d'un state pour stocker un tableau de repas
+  const [food, setFood] = useState();
+  // const [item, setItem] = useState();
 
-  const handleClick = () => {
-    setCounter((counter = 0));
-    setEat(eat);
-    setCount(count);
+  // création d'une fonction qui se déclanche lorsque l'on clique sur un plat
+  const handleClick = (item) => {
+    setFood(item.target.value);
   };
-  const [eat, setEat] = useState();
-  const [count, setCount] = useState();
-  console.log(data);
+  // création d'une copie du tableau pour ajouter les nouveaux plats
+  let foodCopy = [...food];
+
+  // pour ajouter un nouveau plat, il faut le pusher dans la copie de tableau
+  foodCopy.push({ item });
   return (
     <>
       <div className="main">
         <div>
           {data.map((item, index) => {
             return (
-              <div
-                className="menu"
-                onClick={() => {
-                  item.title && setCounter(counter + 1) && setEat(eat + 1);
-                  item.price && setCounter(counter + 1) && setCount(count + 1);
-                  console.log(item.title, item.price);
-                }}
-                key={item.id}
-              >
+              <div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <span>{item.price}</span>
@@ -35,47 +31,6 @@ const Menu = ({ data }) => {
           })}
         </div>
       </div>
-      return (
-      <>
-        <div className="panier">
-          <button type="button">Valider mon panier</button>
-          <p>Votre panier est vide</p>
-          <div
-            className="add"
-            onClick={() => {
-              <button type="button">Ajouter au panier</button>;
-            }}
-          ></div>
-          <div>
-            <button className="delet" onCLick={handleClick}>
-              Vider mon panier
-            </button>
-          </div>
-
-          <div className="allButtons">
-            <div className="quantity">
-              <button
-                className="downQuantity"
-                onClick={() => {
-                  setCounter(counter - 1);
-                }}
-              >
-                -
-              </button>
-              <p>{counter}</p>
-              <button
-                className="upQuantity"
-                onClick={() => {
-                  setCounter(counter + 1);
-                }}
-              >
-                +
-              </button>
-            </div>
-          </div>
-        </div>
-      </>
-      );
     </>
   );
 };

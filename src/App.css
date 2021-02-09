@@ -57,5 +57,9 @@ h2 {
 }
 .main {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  float: left;
+  width: 100vw;
+  height: 500px;
 }
